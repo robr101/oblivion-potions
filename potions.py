@@ -14,7 +14,7 @@ with open('ingredients.pkl', 'rb') as f:
     ingredients = pickle.load(f)
 
 if not ingredients:
-    print("Error loading ingredients file")
+    print("Error loading ingredients file, try running oblivion_alchemy.py")
     quit()
 
 mode = None
@@ -31,9 +31,10 @@ def get_all_rare():
 
 def print_all(ingreds):
     for ing in ingreds:
+        print("\n")
         if ing.classification == 'rare':
             print('*** RARE ***')
-        print("\n\nName: {}\n Desc: {}\n Class: {}".format(ing.name, ing.description, ing.classification))
+        print("\nName: {}\n Desc: {}\n Class: {}".format(ing.name, ing.description, ing.classification))
         print(" Effects:")
         for effect in ing.effects:
             print("  {}".format(effect))
@@ -49,6 +50,7 @@ def sort_by_harvest_prob(ingreds):
     return sorted(ingreds, key=lambda x: x.harvest_probability, reverse=False)
 
 if mode and criteria:
+    mode = mode.lower()
     if mode == 'effect':
         ings = get_all_with_effect(criteria)
         if ings:
