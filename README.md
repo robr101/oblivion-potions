@@ -7,8 +7,8 @@ Just a few scripts to help view alchemy ingredients and find combinations.
 ## Files
 
 - `alchemy_ingredient.py`: class definition to hold info about individual ingredients
-- `ingredients.pkl`: data file including all the ingredients scraped from
-- `oblivion_alchemy.py`: script scrapes UESP.net for alchemy ingredients in Oblivion and creates a pickle file of all the ingredients.
+- `ingredients.pkl`: data file including all the ingredients scraped from UESP.net
+- `oblivion_alchemy.py`: scrapes UESP.net for alchemy ingredients in Oblivion and creates a pickle file of all the ingredients.
 - `potions.py`: search for potion ingredients by effect, or sort ingredients by value, weight, and harvest probability
 
 ## Usage
